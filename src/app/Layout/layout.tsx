@@ -6,6 +6,13 @@ import { RiSeedlingLine } from "react-icons/ri";
 import { FaTerminal } from "react-icons/fa";
 import { IoCodeSlash } from "react-icons/io5";
 import { HiPlusSmall } from "react-icons/hi2";
+
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import SearchIcon from '@mui/icons-material/Search';
+
 interface LayoutProps{
     children:ReactNode, 
     title:string
@@ -22,12 +29,14 @@ export function Layout({children,title}:LayoutProps){
             <section className='bg-[#F1F1F1] w-1/5 flex flex-col items-center p-2 border-r border-solid border-r-[#DDDDDD]   ' >
                 
                 <div className='flex flex-col gap-3 h-2/5   w-full  '>
+
+
                     <Input title='Daniel Fernandes Silva'>
                         <IoCodeSlash className='w-6 '  />
                     </Input>
 
                     <Inputs title='Sobre mim'>
-                        <IoSearchOutline className='w-6 '  />
+                        <SearchIcon className='w-6 '  />
                     </Inputs>
 
                     <Inputs title='Projetos'>
@@ -37,6 +46,8 @@ export function Layout({children,title}:LayoutProps){
                     <Inputs title='New Page'>
                         <HiPlusSmall className='' />
                     </Inputs>
+
+
                 </div>
 
                 
@@ -52,13 +63,42 @@ export function Layout({children,title}:LayoutProps){
                 </div>
             </section>
 
-            <section className=' flex flex-col'>
+            <section className=' flex flex-col  w-4/5'>
 
-                <div className='flex   h-9'>
-                    <p>{title}</p>
+                <div className='flex items-center    justify-between h-9 px-5 pt-2 '>
+                    <div>
+                     <p>{title}</p>
+
+                    </div>
+                    
+                    <div className='flex items-center gap-3'>
+                       <button className=' p-2 rounded-lg hover:bg-[#f7f7f7]'>
+                            Share
+                       </button>
+
+                       <button className='p-2 rounded-lg hover:bg-[#f7f7f7]'>
+                            <ChatBubbleOutlineIcon className='w-5 ' />
+                       </button>
+
+                       <button className='p-2 rounded-lg hover:bg-[#f7f7f7]'>
+                            <AccessTimeIcon className='w-5' />
+                       </button>
+
+
+                       <button className='p-2 rounded-lg hover:bg-[#f7f7f7]'>
+                            <StarBorderIcon className='w-5' />
+                       </button>
+
+                       <button className='p-2 rounded-lg hover:bg-[#f7f7f7]'>
+                            <MoreHorizIcon className='w-5' />
+                       </button>
+                    </div>
                 </div>
+                
 
-                {children}
+                <main className=' h-full'>
+                    {children}
+                </main>
             </section>
         </div>
     )
