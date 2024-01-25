@@ -9,11 +9,12 @@ import { HiPlusSmall } from "react-icons/hi2";
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
 
-import StarBorderIcon from '@mui/icons-material/StarBorder';
-import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SearchIcon from '@mui/icons-material/Search';
 import {ThreePoints}from '../Components/ThreePoints'
+import { ButtonStar } from '../Components/ButtonStar';
+import { ShareButton } from '../Components/ShareButton';
+import { ButtonComment } from '../Components/ButtonComment';
 
 interface LayoutProps{
     children:ReactNode, 
@@ -73,24 +74,16 @@ export function Layout({children,title}:LayoutProps){
                     </div>
                     
                     <div className='flex items-center gap-3'>
-                       <button className=' p-2 rounded-lg hover:bg-[#f7f7f7]'>
-                            Share
-                       </button>
-
-                       <button className='p-2 rounded-lg hover:bg-[#f7f7f7]'>
-                            <ChatBubbleOutlineIcon className='w-5 ' />
-                       </button>
-
+                     
+                        <ShareButton/>
+                        <ButtonComment/>
                        <button className='p-2 rounded-lg hover:bg-[#f7f7f7]'>
                             <AccessTimeIcon className='w-5' />
                        </button>
 
 
-                       <button className='p-2 rounded-lg hover:bg-[#f7f7f7]'>
-                            <StarBorderIcon className='w-5' />
-                       </button>
 
-                   
+                        <ButtonStar/>
                         <ThreePoints/>
                         
                     </div>

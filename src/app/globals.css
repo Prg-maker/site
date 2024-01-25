@@ -9,8 +9,9 @@
 }
 
 
-*, html , body{
+*, html , body, input , button{
   font-family: 'Inter', sans-serif;
+
 }
 @layer utilities {
   .text-balance {
