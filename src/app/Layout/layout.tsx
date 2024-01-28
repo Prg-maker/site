@@ -26,7 +26,7 @@ interface LayoutProps{
 
 export function Layout({children,title}:LayoutProps){
 
-
+    
 
     return(
         <Theme className='h-screen  flex bg-white'>

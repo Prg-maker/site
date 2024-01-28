@@ -37,7 +37,7 @@ export function ThreePoints() {
 
           <Box width="9" height="9" className=" flex flex-col items-center justify-center rounded-lg cursor-pointer hover:bg-[#EAEAEA]">
             <Text className="text-xl font-fira-code" >Ag</Text>
-            <span className=" text-xs  text-[#929292] font-fira-code"  >Serif</span>
+            <span className=" text-xs  text-[#929292] font-fira-code"  >Fira Code</span>
           </Box>
         </div>
 

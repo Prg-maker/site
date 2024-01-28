@@ -11,8 +11,19 @@
 
 *, html , body, input , button{
   font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased ;
+}
+
+.font1{
+  font-family: 'Inter', sans-serif;
 
 }
+
+.font2{
+  font-family: "'Fira Mono', monospace";
+
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
