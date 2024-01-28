@@ -1,3 +1,4 @@
+"use client"
 import {ReactNode} from 'react'
 import { Input } from '../Components/Input';
 import { Inputs } from '../Components/Inputs';
@@ -9,12 +10,13 @@ import { HiPlusSmall } from "react-icons/hi2";
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
 
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SearchIcon from '@mui/icons-material/Search';
 import {ThreePoints}from '../Components/ThreePoints'
 import { ButtonStar } from '../Components/ButtonStar';
 import { ShareButton } from '../Components/ShareButton';
 import { ButtonComment } from '../Components/ButtonComment';
+import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
+import { CommitsUpdates } from '../Components/CommitsUpdate';
 
 interface LayoutProps{
     children:ReactNode, 
@@ -35,6 +37,9 @@ export function Layout({children,title}:LayoutProps){
 
                     <Input title='Daniel Fernandes Silva'>
                         <IoCodeSlash className='w-6 '  />
+                        <button className="cursor-pointer  hover:bg-[#D0D0D0] rounded flex justify-center items-center">
+                            <KeyboardDoubleArrowLeftIcon className=''/>
+                        </button>
                     </Input>
 
                     <Inputs title='Sobre mim'>
@@ -45,7 +50,7 @@ export function Layout({children,title}:LayoutProps){
                         <RiSeedlingLine className='w-6 '  />
                     </Inputs>
 
-                    <Inputs title='New Page'>
+                    <Inputs title='Atualizações'>
                         <HiPlusSmall className='' />
                     </Inputs>
 
@@ -77,12 +82,7 @@ export function Layout({children,title}:LayoutProps){
                      
                         <ShareButton/>
                         <ButtonComment/>
-                       <button className='p-2 rounded-lg hover:bg-[#f7f7f7]'>
-                            <AccessTimeIcon className='w-5' />
-                       </button>
-
-
-
+                        <CommitsUpdates/>
                         <ButtonStar/>
                         <ThreePoints/>
                         

@@ -18,7 +18,7 @@ export function ButtonStar() {
     }
   return (
     <button className="p-2 rounded-lg hover:bg-[#f7f7f7]" onClick={changeColor}>
-      <StarBorderIcon  className="w-5 " color={color}/>
+      <StarBorderIcon  className="w-5 color-red-100" color={color}/>
     </button>
   );
 }

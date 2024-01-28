@@ -1,34 +1,45 @@
-import { DialogContent, DialogRoot, DialogTrigger, Text,DialogTitle , TabsRoot, TabsList, TabsTrigger, TabsContent} from "@radix-ui/themes";
+import {
+  AlertDialogRoot,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogTitle,
+  AlertDialogCancel,
+  AlertDialogAction,
+  AlertDialogDescription,
+  Flex,
+  Button,
+} from "@radix-ui/themes";
 
 export function ShareButton() {
   return (
-    <DialogRoot>
-        <DialogTrigger>
-            <button className=" p-2 rounded-lg hover:bg-[#f7f7f7]">Share</button>
-        </DialogTrigger>
+    <AlertDialogRoot>
+      <AlertDialogTrigger>
+        <button className=" p-2 rounded-lg hover:bg-[#f7f7f7]">Share</button>
+      </AlertDialogTrigger>
 
-        <DialogContent>
-           
-           <TabsRoot>
-                <TabsList>
-                    <TabsTrigger value="compartilhar">
-                        share
-                    </TabsTrigger>
-                </TabsList>
+      <AlertDialogContent className="mx-w-[450px]">
+        <AlertDialogTitle>Obrigado por estar aqui.</AlertDialogTitle>
+        <AlertDialogDescription>    
+          Seria muito útil se você pudesse compartilhar este site com outras
+          pessoas ou enviá-lo para empresas. Sua ajuda é apreciada!
+        </AlertDialogDescription>
 
-                <TabsContent value="compartilhar">
-                   <div className="mt-4">
-                    <button>
-                            <Text size="2">
-                                Copy link
-                            </Text>
-                        </button>
-                   </div>
-                </TabsContent>
 
-           </TabsRoot>
+        <Flex className="w-full gap-3 mt-4" justify="end">
+            <AlertDialogCancel>
+                <Button  className="cursor-pointer"  color="red">
+                    Cancel
+                </Button>
+            </AlertDialogCancel>
 
-        </DialogContent>
-    </DialogRoot>
+            <AlertDialogAction>
+                <Button  className="cursor-pointer" variant="solid" color="green">
+                    Copiar link
+                </Button>
+            </AlertDialogAction>
+        </Flex>
+
+      </AlertDialogContent>
+    </AlertDialogRoot>
   );
 }
